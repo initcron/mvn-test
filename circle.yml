@@ -1,10 +1,9 @@
-general:
-  artifacts:
-    - "target/*.war" # relative to the build directory
-    - "target/*.jar" # relative to the build directory
-    - "target/maven-app-3.0-release.jar"
+
 
 test:
   override:
     - mvn package
-  
+    
+  post:
+    - mkdir $CIRCLE_ARTIFACTS/jars
+    - mv target/*.jar $CIRCLE_ARTIFACTS/jars
