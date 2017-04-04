@@ -2,3 +2,8 @@ general:
   artifacts:
     - "target/*.war" # relative to the build directory
     - "target/*.jar" # relative to the build directory
+
+test:
+  override:
+    - mvn package
+  
