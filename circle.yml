@@ -2,6 +2,7 @@ general:
   artifacts:
     - "target/*.war" # relative to the build directory
     - "target/*.jar" # relative to the build directory
+    - "target/maven-app-3.0-release.jar"
 
 test:
   override:
